@@ -1,0 +1,36 @@
+package fizzbuzz;
+
+import org.junit.Test;
+
+import junit.framework.Assert;
+
+//1. The “fun” part is that if the number is divisible by three, you instead say “Fizz” 
+//2. if it is divisible by five you say “Buzz”. 
+//For numbers which are multiples of both three and five print “FizzBuzz “.
+
+
+
+public class fizzbuzztest {
+
+@Test
+public void test() {
+	Fizzbuzz fizzbuzz= new Fizzbuzz();
+//Assert.assertEquals(expected: "1",fizzbuzz.action(input: 1));
+//Assert.assertEquals(expected: "2",fizzbuzz.action(input: 2));
+	
+//	this part was new to me, but got it(Easy).....
+	
+Assert.assertEquals( "1", fizzbuzz.action(1));
+Assert.assertEquals( "2", fizzbuzz.action(2));
+
+Assert.assertEquals( "Fizz", fizzbuzz.action(3));
+Assert.assertEquals( "4", fizzbuzz.action(4));
+Assert.assertEquals( "Buzz", fizzbuzz.action(5));
+Assert.assertEquals( "Fizz", fizzbuzz.action(2*3));
+Assert.assertEquals( "Buzz", fizzbuzz.action(2*5));
+Assert.assertEquals( "FizzBuzz", fizzbuzz.action(2*3*5));
+	
+	
+}
+
+}
